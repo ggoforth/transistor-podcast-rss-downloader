@@ -1,33 +1,23 @@
-```markdown
-# Project Title
+# Podcast Downloader
 
-A brief description of what this project does and who it's for.
+This Python script is designed to download podcasts from a specified RSS feed URL. It fetches podcast data, downloads MP3 files, and saves pertinent details about each podcast in text and JSON formats.
 
-## Installation
+## Features
 
-Instructions on how to install the project or library.
+- Fetches podcast data from an RSS feed.
+- Downloads podcast episodes in MP3 format.
+- Creates a dedicated folder for each podcast episode.
+- Saves podcast details such as title, publication date, link, and description in a text file.
+- Stores complete podcast entry data in a JSON file.
+
+## Requirements
+
+- Python 3.x
+- External Libraries:
+  - `requests` for handling HTTP requests.
+  - `feedparser` for parsing the RSS feed.
+  
+You can install these libraries using the following command:
 
 ```bash
-pip install -r requirements.txt
-```
-
-## Usage/Examples
-
-```python
-python jtf-downloader.py
-```
-
-## API Reference
-
-If applicable, include information about how to use the APIs in your project.
-
-## Contributing
-
-Instructions on how to contribute to your project.
-
-## License
-
-Information about the license.
-```
-
-You can create a README file in your project's root directory and paste the above content into it. The file should be named `README.md`.
+pip install requests feedparser
