@@ -3,7 +3,7 @@ import os
 import feedparser
 
 
-rss_feed_url = "https://feeds.transistor.fm/just-the-facts-and-that-is-that"
+rss_feed_url = "<your podcast feed url>"
 feed = feedparser.parse(rss_feed_url)
 
 podcast_directory = "podcasts"
@@ -12,12 +12,8 @@ os.makedirs(podcast_directory, exist_ok=True)
 print("Fetching podcast feed...")
 
 for idx, entry in enumerate(feed.entries):
-    print(f"Downloading episode {idx + 1} of {len(feed.entries)}...", end="", flush=True)
-
     # calculate the percentage complete
     percentage = (idx / len(feed.entries)) * 100
-
-    # print the percentage complete
     print(f"\r{percentage:.0f}% complete", end="", flush=True)
 
     podcast_folder = f"{podcast_directory}/{entry.title}"
