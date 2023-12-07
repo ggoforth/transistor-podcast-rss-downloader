@@ -23,11 +23,15 @@ my podcast episodes for archival.
 You can install these libraries using the following command:
 
 ```bash
-pip install requests feedparser
+pip install -r requirements.txt
 ```
 
 ## Usage
 
 ```bash
-python downloader.py <RSS feed URL>
+python downloader.py Optional(<RSS feed URL>)
 ```
+
+You will be prompted to enter the RSS feed URL if you don't provide one as an
+argument. 
+
