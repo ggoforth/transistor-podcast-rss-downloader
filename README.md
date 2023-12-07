@@ -1,6 +1,9 @@
-# Podcast Downloader
+# Transistor.fm Podcast Downloader
 
-This Python script is designed to download podcasts from a specified RSS feed URL. It fetches podcast data, downloads MP3 files, and saves pertinent details about each podcast in text and JSON formats.
+This Python script is designed to download podcasts from a Transistor.fm RSS 
+feed URL. It fetches podcast data, downloads MP3 files, and saves pertinent 
+details about each podcast in text and JSON formats.  I used it to download all 
+my podcast episodes for archival.  
 
 ## Features
 
