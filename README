@@ -1,0 +1,35 @@
+Sure, here is a basic template for a README file for your project. You can modify it according to your project's needs.
+
+```markdown
+# Project Title
+
+A brief description of what this project does and who it's for.
+
+## Installation
+
+Instructions on how to install the project or library.
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage/Examples
+
+```python
+python jtf-downloader.py
+```
+
+## API Reference
+
+If applicable, include information about how to use the APIs in your project.
+
+## Contributing
+
+Instructions on how to contribute to your project.
+
+## License
+
+Information about the license.
+```
+
+You can create a README file in your project's root directory and paste the above content into it. The file should be named `README.md`.
