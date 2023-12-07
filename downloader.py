@@ -13,15 +13,20 @@ feed = feedparser.parse(rss_feed_url)
 podcast_directory = "podcasts"
 os.makedirs(podcast_directory, exist_ok=True)
 
+author = feed.feed.author
+author_folder = f"{podcast_directory}/{author}"
+os.makedirs(author_folder, exist_ok=True)
+
 print(f"Downloading {feed.feed.title}!")
 print(f"Fetching {len(feed.entries)} podcast episodes...")
+
 
 for idx, entry in enumerate(feed.entries):
     # calculate the percentage complete
     percentage = (idx / len(feed.entries)) * 100
     print(f"\r{percentage:.0f}% complete", end="", flush=True)
 
-    podcast_folder = f"{podcast_directory}/{entry.title}"
+    podcast_folder = f"{author_folder}/{entry.title}"
     os.makedirs(podcast_folder, exist_ok=True)
     mp3 = entry.enclosures[0].href
 

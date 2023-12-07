@@ -12,6 +12,7 @@ my podcast episodes for archival.
 - Creates a dedicated folder for each podcast episode.
 - Saves podcast details such as title, publication date, link, and description in a text file.
 - Stores complete podcast entry data in a JSON file.
+- Supports multiple RSS feeds.
 
 ## Requirements
 
