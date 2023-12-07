@@ -24,3 +24,10 @@ You can install these libraries using the following command:
 
 ```bash
 pip install requests feedparser
+```
+
+## Usage
+
+```bash
+python downloader.py <RSS feed URL>
+```

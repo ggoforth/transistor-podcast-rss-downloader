@@ -1,15 +1,20 @@
 import requests
 import os
 import feedparser
+import sys
 
+if len(sys.argv) > 1:
+    rss_feed_url = sys.argv[1]
+else:
+    rss_feed_url = input("Enter the podcast RSS feed URL: ")
 
-rss_feed_url = "<your podcast feed url>"
 feed = feedparser.parse(rss_feed_url)
 
 podcast_directory = "podcasts"
 os.makedirs(podcast_directory, exist_ok=True)
 
-print("Fetching podcast feed...")
+print(f"Downloading {feed.feed.title}!")
+print(f"Fetching {len(feed.entries)} podcast episodes...")
 
 for idx, entry in enumerate(feed.entries):
     # calculate the percentage complete
@@ -49,7 +54,8 @@ for idx, entry in enumerate(feed.entries):
 
         f.write(entry)
 
-    print(".", end="", flush=True)
+    # if the percentage is 100, then we are done
+    print(f"\r100% complete", end="", flush=True)
 
 print()
 print("Done!")
